@@ -1,11 +1,9 @@
-import React, { useState } from "react";
 import { Card, Typography, Box, IconButton } from "@mui/material";
 import { toast } from "react-toastify";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
-import { useDispatch, useSelector } from "react-redux";
-import type { AppDispatch, RootState } from "../store";
-import { openModal } from "../redux/modalSlice";
+import { useDispatch } from "react-redux";
+import type { AppDispatch } from "../store";
 import { deleteTask } from "../redux/tasksSlice";
 
 const TaskCard = ({ data, onEdit }: any) => {

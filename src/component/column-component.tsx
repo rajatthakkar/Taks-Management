@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import TaskCard from "./task-card";
 import { Box, Typography, TextField } from "@mui/material";
-import { closeModal, openModal } from "../redux/modalSlice";
-import { useSelector, useDispatch } from "react-redux";
-import type { RootState, AppDispatch } from "../store";
+import { openModal } from "../redux/modalSlice";
+import { useDispatch } from "react-redux";
+import type { AppDispatch } from "../store";
 import type { Task } from "../redux/tasksSlice";
-import Modal from "./modal";
 interface propsType {
   Title: string;
   items: any;
@@ -37,7 +36,7 @@ const ColumnComponent: React.FC<propsType> = ({
   return (
     <div
       className="w-full sm:w-[30%] h-[87vh] bg-primary border-[5px] border-borderLight text-textDark rounded-[1rem] p-4"
-      style={{ padding: "1rem", borderRadius: "1rem" }}
+      style={{ padding: "0.8rem", borderRadius: "1rem" }}
     >
       <Box
         sx={{
@@ -47,6 +46,7 @@ const ColumnComponent: React.FC<propsType> = ({
           alignItems: "center",
           justifyContent: "space-between",
           gap: 2,
+          height: "15vh",
         }}
       >
         <Typography variant="h4" fontWeight={600}>
